@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | pourboire calculator app</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <h1>Split<br />tter</h1>
+      </div>
+      <div class="container">
+        <div class="card-1">
+          <div class="total-facture-amount">
+            <p class="item">facture</p>
+            <img class="icon" src="images/icon-dollar.svg" />
+            <input
+              type="text"
+              id="total-facture"
+              class="input"
+              placeholder="0"
+              maxlength="6"
+            />
+          </div>
+          <div class="pourboire">
+            <p class="item">Selectionner pourboire %</p>
+            <div class="pourcent">
+              <button class="pourboire-pourcent" type="button">5%</button>
+              <button class="pourboire-pourcent" type="button">10%</button>
+              <button class="pourboire-pourcent" type="button">15%</button>
+              <button class="pourboire-pourcent" type="button">25%</button>
+              <button class="pourboire-pourcent" type="button">50%</button>
+              <input class="input input-personalise" placeholder="personalisé" />
+            </div>
+            <div class="total-personne">
+              <p class="item">Nombre de personnes</p>
+              <img class="icon" src="images/icon-person.svg" />
+              <input
+                type="text"
+                id="num-personne"
+                class="input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="card-2">
+          <div class="pourboire-amount">
+            <div class="pourboire-amount-text">
+              <p class="text-1">Pourboire</p>
+              <p class="text-2">/Personne</p>
+            </div>
+            <div class="pourboire-amount-total">
+              <span>$0.00</span>
+            </div>
+          </div>
+
+          <div class="pourboire-amount total-person-amount">
+            <div class="pourboire-amount-text">
+              <p class="text-1">Totale</p>
+              <p class="text-2">/ personne</p>
+            </div>
+            <div class="pourboire-amount-total">
+              <span>$0.00</span>
+            </div>
+          </div>
+
+          <button class="reset-button" type="button">reset</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.frontendmentor.io/profile/w4ri0">@w4ri0</a>.
+      </div>
+    </main>
+  </body>
+</html>

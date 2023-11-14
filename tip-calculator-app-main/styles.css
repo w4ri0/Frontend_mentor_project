@@ -1,0 +1,245 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --gray-cyan: hsl(184, 14%, 56%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --very-light-gray-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: var(--light-gray-cyan);
+  min-height: 100vh;
+}
+
+.heading {
+  color: var(--very-dark-cyan);
+  font-size: 10px;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding-top: 90px;
+  margin-bottom: 5rem;
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.card-1 {
+  margin-right: auto;
+  text-align: left;
+  padding: 40px;
+}
+
+.total-facture-amount {
+  position: relative;
+}
+
+.item {
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+}
+.icon {
+  position: absolute;
+  bottom: 34px;
+  left: 10px;
+}
+.input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--very-light-gray-cyan);
+}
+
+.input:hover {
+  border: 2px solid var(--strong-cyan);
+}
+
+.pourcent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pourboire-pourcent {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-size: 17px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pourboire-pourcent:hover {
+  background-color: var(--light-gray-cyan);
+  color: black;
+}
+
+.input-personalise {
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+.total-personne {
+  position: relative;
+}
+
+.card-2 {
+  background-color: var(--very-dark-cyan);
+  width: 350px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 0 2rem;
+}
+
+.pourboire-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pourboire-amount-text {
+  color: var(--white);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.text-2 {
+  color: var(--gray-cyan);
+  font-size: 10px;
+}
+.pourboire-amount-total {
+  color: var(--strong-cyan);
+  font-size: 30px;
+}
+
+.pourboire-amount-total,
+.total-person-amount {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pourboire-amount-total span,
+.total-person-amount span {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.total-person-amount {
+  margin-top: -50px;
+}
+
+.reset-button {
+  margin-top: 40px;
+  width: 220px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--strong-cyan);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(186, 14%, 43%);
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: var(--light-gray-cyan);
+  opacity: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+  .heading {
+    margin-bottom: 2rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    height: 100%;
+  }
+
+  .card-2 {
+    padding-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .reset-button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .input {
+    width: 100%;
+  }
+  .pourcent {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .pourboire-pourcent {
+    /* width: 120px; */
+    padding: 20px 30px;
+  }
+
+  .card-2 {
+    /* width: 320px; */
+    padding-bottom: 2rem;
+  }
+
+  .pourboire-amount-text {
+    font-size: 1.2em;
+  }
+
+  .pourboire-pourcent {
+    font-size: 20px;
+  }
+}
